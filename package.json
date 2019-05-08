@@ -1,0 +1,38 @@
+{
+  "name": "SLink",
+  "build": 18,
+  "version": "3.0.14",
+  "private": true,
+  "rnpm": {
+    "assets": [
+      "./src/Assets/fonts"
+    ]
+  },
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.6.3",
+    "react-native": "^0.57.8",
+    "react-native-background-downloader": "^2.0.1",
+    "react-native-cheerio": "^1.0.0-rc.4",
+    "react-native-firebase": "^5.2.1",
+    "react-native-navigation-bar-color": "0.0.8",
+    "react-native-progress-circle": "^2.0.1",
+    "react-native-snap-carousel": "^3.7.5",
+    "react-native-system-setting": "1.7.1",
+    "react-native-video": "^4.4.1",
+    "react-navigation": "^2.17.0",
+    "rn-fetch-blob": "0.10.15"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

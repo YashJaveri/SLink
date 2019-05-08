@@ -1,0 +1,34 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'SLink' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for SLink
+  # Required by RNFirebase
+  pod 'Firebase/Core', '~> 5.15.0'
+  pod 'Firebase/AdMob', '~> 5.15.0'
+  
+
+  pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+
+  target 'SLinkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'SLink-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for SLink-tvOS
+
+  target 'SLink-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
