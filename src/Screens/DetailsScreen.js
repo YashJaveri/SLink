@@ -214,6 +214,12 @@ export default class DetailsScreen extends React.Component {
     )
     this.props.navigation.setParams({ animatedValue: 0 })
   }
+
+  componentDidBlur(){
+    if(Math.random()*100 > 70)
+      AdManager.showInterstitial(2000);
+  }
+
   componentWillUnmount() {
     this.mounted = false
     Dimensions.removeEventListener('change')

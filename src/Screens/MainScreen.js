@@ -17,7 +17,6 @@ import {
 import Carousel from 'react-native-snap-carousel'
 
 import Constants from '../Constants'
-import Calls from '../Calls'
 import SnapItem from '../Components/SnapItem'
 import PosterSliderView from '../Components/PosterSliderView'
 import PosterItem from '../Components/PosterItem'

@@ -125,7 +125,7 @@ class LinkItem extends React.Component {
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => {
-          Platform.OS === 'ios' ? AdManager.showInterstitial(2000) : null
+         //Platform.OS === 'ios' ? AdManager.showInterstitial(2000) : null
           Platform.OS === 'android'
             ? this.props.navigation.navigate('videoPlayer', {
                 other: this.props.other,

@@ -8,7 +8,6 @@ import {
   Platform,
   Image,
   PermissionsAndroid,
-  ToastAndroid,
   Alert,
   NetInfo,
   AsyncStorage
@@ -21,7 +20,6 @@ import WatchlistManager from '../Managers/WatchlistManager'
 import SettingsManager from '../Managers/SettingsManager'
 import ProgressManager from '../Managers/ProgressManager'
 import { DownloadManager } from '../Managers/DownloadManager'
-import SubsExtractor from '../SubsExtractor'
 import WebCrawlerProcess from '../WebCrawler'
 
 const styles = StyleSheet.create({

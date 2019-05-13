@@ -1,7 +1,7 @@
 {
   "name": "SLink",
-  "build": 18,
-  "version": "3.0.14",
+  "build": 19,
+  "version": "3.0.15",
   "private": true,
   "rnpm": {
     "assets": [

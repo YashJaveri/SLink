@@ -128,7 +128,7 @@ export default class SettingsManager {
     var jsonResp = await versionCheckResponse.json()
     if (jsonResp.build > currentBuilVersion) {
       jsonResp.required
-        ? Alert.alert('Update available', 'Would you like to download?', [
+        ? Alert.alert('Update available', 'Would you like to download?\nNote: If Install Page does not open, Go to Downloads->SLink_v3 and install the apk OR update it from the Store', [
             {
               text: 'Yes',
               onPress: () => {

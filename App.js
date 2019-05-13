@@ -8,14 +8,10 @@ import {
   ScrollView,
   TouchableOpacity,
   Linking,
-  Dimensions,
-  NetInfo,
-  Alert,
 } from "react-native";
 import {
   createDrawerNavigator,
   createStackNavigator,
-  createAppContainer,
 } from "react-navigation";
 import firebase from "react-native-firebase";
 
