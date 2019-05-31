@@ -213,8 +213,8 @@ export default class AndroidVideoPlayer extends React.Component {
     })
     Platform.OS === 'android'
       ? BackHandler.addEventListener('hardwareBackPress', () => {
-          StatusBar.setHidden(false, 'slide')
           AdManager.showInterstitial(2000)
+          StatusBar.setHidden(false, 'slide')
           Platform.OS === 'android' ? ShowNavigationBar() : null
           this.props.navigation.goBack()
         })

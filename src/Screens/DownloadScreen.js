@@ -84,6 +84,7 @@ class DownloadItem extends React.Component {
   }
   done = () => {
     AdManager.showInterstitial(2000)
+    StatusBar.setHidden(true)
     this.mounted ? this.setState({}) : null
     DownloadManager.downloads[this.props.index].state ===
     DownloadManager.downloadStates.DONE

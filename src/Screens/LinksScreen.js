@@ -82,7 +82,6 @@ class LinkItem extends React.Component {
         return require('../Assets/spinner.gif')
       }
     }
-    this.mounted ? this.setState({}) : null
   }
 
   getLink = () => {
@@ -125,7 +124,7 @@ class LinkItem extends React.Component {
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => {
-         //Platform.OS === 'ios' ? AdManager.showInterstitial(2000) : null
+          //Platform.OS === 'ios' ? AdManager.showInterstitial(2000) : null
           Platform.OS === 'android'
             ? this.props.navigation.navigate('videoPlayer', {
                 other: this.props.other,
@@ -213,6 +212,7 @@ class LinkItem extends React.Component {
           <TouchableOpacity
             onPress={() => {
               if (this.downloadable) {
+                if (this.mounted) this.setState({})
                 let process = new DownloadProcess(
                   this.props.link,
                   this.props.data.id,
@@ -235,6 +235,7 @@ class LinkItem extends React.Component {
 
                 DownloadManager.startDownload(process)
                 AdManager.showInterstitial(2000)
+                StatusBar.setHidden(false, 'slide')
                 if (this.mounted) this.setState({})
               }
             }}
@@ -316,8 +317,8 @@ export default class LinksScreen extends React.Component {
           : this.detailData.title == null
             ? this.detailData.original_title
             : this.detailData.title
-      console.log(this.detailData) 
-      console.log(title) 
+      console.log(this.detailData)
+      console.log(title)
 
       this.props.navigation.setParams({
         title: this.other.isTv ? this.detailData.name : this.detailData.title
@@ -355,7 +356,7 @@ export default class LinksScreen extends React.Component {
       })
     }
   }
-//==========
+  //==========
   HandleLoading = async title => {
     this.process = new WebCrawlProcess()
 
@@ -391,7 +392,7 @@ export default class LinksScreen extends React.Component {
         }
       }
     }
-//==========
+    //==========
     if (this.other.isTv) {
       if (SettingsManager.paralProc) {
         this.process.crawlForTvShowParallel(
